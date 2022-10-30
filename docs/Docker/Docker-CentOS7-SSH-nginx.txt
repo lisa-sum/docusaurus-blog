@@ -1,0 +1,40 @@
+https://www.cnblogs.com/MXming/p/15256954.html
+https://space.bilibili.com/480140591/video?tid=0&page=2&keyword=&order=pubdate
+
+docker run -itd --privileged  -p 6000:22 eeb6ee3f44bd /sbin/init
+
+docker exec -it  /bin/bash
+
+1. 下载nginx依赖
+
+2. 下载nginx
+
+wget <nginx-uri>
+
+3. 配置nginx
+
+./configure --prefix=/usr/local/nginx
+
+make install
+
+4. 校验安装是否成功
+cd /usr/local/nginx; ls
+
+有四个文件夹: sbin conf 
+
+5. 修改conf配置文件 
+
+进入到nginx的conf目录
+cd /usr/local/nginx/conf
+
+6. 修改nginx配置文件
+vi nginx.conf
+
+	1. 将location的root修改成网站根目录
+	2. 配置nginx权限,让nginx读写(第一行改为root)
+
+7. 让nginx读取修改过的配置文件
+	1. 进入到nginx的sbin目录
+	cd /usr/local/nginx/sbin
+	2. 更新配置文件信息  (./ 当前目录下 nginx 可执行文件 -s reload nginx读取配置文件的参数)
+	 ./nginx -s reload

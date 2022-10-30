@@ -1,0 +1,10 @@
+https://www.cnblogs.com/MXming/p/15256954.html
+https://cloud.tencent.com/document/product/213/46000
+
+docker run -itd --privileged  -p 6000:22 eeb6ee3f44bd /sbin/init
+
+docker run -itd --privileged  -p 6000:22 c4221caf75ee /sbin/init
+
+docker exec -it 643a65c59474 /bin/bash
+
+docker exec -it  /bin/bash
